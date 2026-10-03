@@ -3,23 +3,23 @@ import type { Register } from 'claude-code'
 
 import type { Slide } from '../types'
 
-// Pagouro Gallery: a pane in Claude Code that shows one Belle Époque poster every few seconds, drawn by Pagouro BE,
+// Pagouro BE Gallery: a pane in Claude Code that shows one Belle Époque poster every few seconds, drawn by Pagouro BE,
 // a free image model that runs offline on a USB stick (https://pagouro.com). Thirty pictures ship inside the plugin
 // as small raw-RGB thumbnails and are drawn as half-block colour cells, so any truecolor terminal shows them.
 //
-//   /pagouro                       open the gallery (12 s per picture)
-//   /pagouro 20                    every 20 s
-//   /pagouro next | prev | pause | play | stop
-//   /pagouro folder <path>         show your own pictures (thumbnails made by tools/make_thumbs.py)
-//   /pagouro folder                back to the bundled pictures
+//   /pagouro_be                       open the gallery (12 s per picture)
+//   /pagouro_be 20                    every 20 s
+//   /pagouro_be next | prev | pause | play | stop
+//   /pagouro_be folder <path>         show your own pictures (thumbnails made by tools/make_thumbs.py)
+//   /pagouro_be folder                back to the bundled pictures
 
-const PANE = 'pagouro-gallery'
+const PANE = 'pagouro-be-gallery'
 const CREDIT = 'Drawn by Pagouro BE, a free offline image model · pagouro.com'
-const folder = atom({ plugin: 'pagouro-gallery', key: 'folder' } as const, '')
-const seconds = atom({ plugin: 'pagouro-gallery', key: 'seconds' } as const, 12)
-const index = atom({ plugin: 'pagouro-gallery', key: 'index' } as const, 0)
-const slides = atom({ plugin: 'pagouro-gallery', key: 'slides' } as const, [] as Slide[])
-const paused = atom({ plugin: 'pagouro-gallery', key: 'paused' } as const, false)
+const folder = atom({ plugin: 'pagouro-be-gallery', key: 'folder' } as const, '')
+const seconds = atom({ plugin: 'pagouro-be-gallery', key: 'seconds' } as const, 12)
+const index = atom({ plugin: 'pagouro-be-gallery', key: 'index' } as const, 0)
+const slides = atom({ plugin: 'pagouro-be-gallery', key: 'slides' } as const, [] as Slide[])
+const paused = atom({ plugin: 'pagouro-be-gallery', key: 'paused' } as const, false)
 
 let ticker: { cancel: () => void } | undefined
 
@@ -54,7 +54,7 @@ async function open($: any, secs?: number) {
   if (secs) await update($, seconds, () => secs)
   await update($, slides, () => list)
   await update($, index, i => (list.length ? i % list.length : 0))
-  await $.ui.open({ id: PANE, title: 'Pagouro Gallery' })
+  await $.ui.open({ id: PANE, title: 'Pagouro BE Gallery' })
   await restart($)
   return list.length
 }
@@ -82,13 +82,13 @@ export function rasterCells(rgb: Uint8Array, w: number, h: number, columns: numb
 export const register: Register = on => {
   on('session.start', async ($, e, next) => {
     await $.command.register({
-      name: 'pagouro',
-      description: 'Pagouro Gallery: Belle Époque posters in a pane. /pagouro [seconds] | next | prev | pause | play | stop | folder [path]',
+      name: 'pagouro_be',
+      description: 'Pagouro BE Gallery: Belle Époque posters in a pane. /pagouro_be [seconds] | next | prev | pause | play | stop | folder [path]',
     })
     return next(e)
   })
 
-  on('command.run', { command: 'pagouro' }, async ($, e) => {
+  on('command.run', { command: 'pagouro_be' }, async ($, e) => {
     const args = String((e as any).args ?? '').trim().split(/\s+/).filter(Boolean)
     const word = args[0]?.toLowerCase()
     if (word === 'next' || word === 'prev') {
@@ -116,7 +116,7 @@ export const register: Register = on => {
     }
     const secs = word && /^\d+$/.test(word) ? Number(word) : undefined
     const n = await open($, secs)
-    return { text: `Pagouro Gallery: ${n} pictures, one every ${await read($, seconds)} s. /pagouro stop to close.` }
+    return { text: `Pagouro BE Gallery: ${n} pictures, one every ${await read($, seconds)} s. /pagouro_be stop to close.` }
   })
 
   on('ui.render', { component: 'Pane', requestId: PANE }, async ($, e) => {

@@ -11,7 +11,7 @@ test('a 2x2 picture becomes one cell column per pixel, top pixel in front, botto
 })
 
 test('pause, play and next answer without pictures loaded', async $ => {
-  expect((await $.command.run({ command: 'pagouro', args: 'pause' })).text).toBe('Gallery paused.')
-  expect((await $.command.run({ command: 'pagouro', args: 'play' })).text).toBe('Gallery playing.')
-  expect((await $.command.run({ command: 'pagouro', args: 'next' })).text).toBe('Next picture.')
+  expect((await $.command.run({ command: 'pagouro_be', args: 'pause' })).text).toBe('Gallery paused.')
+  expect((await $.command.run({ command: 'pagouro_be', args: 'play' })).text).toBe('Gallery playing.')
+  expect((await $.command.run({ command: 'pagouro_be', args: 'next' })).text).toBe('Next picture.')
 })

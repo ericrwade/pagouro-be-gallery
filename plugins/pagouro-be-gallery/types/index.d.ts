@@ -2,7 +2,7 @@ export type Slide = { name: string; file: string; width: number; height: number;
 
 declare module 'claude-code' {
   interface PluginState {
-    'pagouro-gallery': {
+    'pagouro-be-gallery': {
       folder: string
       seconds: number
       index: number

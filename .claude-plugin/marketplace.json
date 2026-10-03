@@ -4,9 +4,9 @@
   "owner": { "name": "Eric Wade", "url": "https://pagouro.com" },
   "plugins": [
     {
-      "name": "pagouro-gallery",
-      "source": "./plugins/pagouro-gallery",
-      "description": "A pane of Belle Époque posters drawn by Pagouro BE, the free offline image model. /pagouro to open."
+      "name": "pagouro-be-gallery",
+      "source": "./plugins/pagouro-be-gallery",
+      "description": "A pane of Belle Époque posters drawn by Pagouro BE, the free offline image model, as a color-cell mosaic (coarse on Windows Terminal). /pagouro_be to open."
     }
   ]
 }
