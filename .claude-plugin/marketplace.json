@@ -1,0 +1,12 @@
+{
+  "name": "pagouro",
+  "description": "Plugins from the Pagouro family of free, offline, provenance-first models (pagouro.com)",
+  "owner": { "name": "Eric Wade", "url": "https://pagouro.com" },
+  "plugins": [
+    {
+      "name": "pagouro-gallery",
+      "source": "./plugins/pagouro-gallery",
+      "description": "A pane of Belle Époque posters drawn by Pagouro BE, the free offline image model. /pagouro to open."
+    }
+  ]
+}

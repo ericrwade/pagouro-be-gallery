@@ -1,0 +1,272 @@
+[
+ {
+  "name": "002-poplars-river-sunset",
+  "file": "002-poplars-river-sunset.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a row of tall poplar trees along a river at sunset",
+  "category": "landscapes",
+  "seed": 1000
+ },
+ {
+  "name": "003-woman-watering-flowers",
+  "file": "003-woman-watering-flowers.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a woman watering potted geraniums on a balcony",
+  "category": "everyday",
+  "seed": 1000
+ },
+ {
+  "name": "004-eiffel-tower-spring",
+  "file": "004-eiffel-tower-spring.png",
+  "width": 120,
+  "height": 120,
+  "caption": "the Eiffel Tower seen from a chestnut-lined avenue in spring",
+  "category": "travel",
+  "seed": 1000
+ },
+ {
+  "name": "006-grape-harvest-baskets",
+  "file": "006-grape-harvest-baskets.png",
+  "width": 120,
+  "height": 120,
+  "caption": "grape pickers with baskets in a vineyard at harvest",
+  "category": "wine",
+  "seed": 1000
+ },
+ {
+  "name": "008-lighthouse-storm-waves",
+  "file": "008-lighthouse-storm-waves.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a lighthouse in a storm with waves breaking around it",
+  "category": "lighthouses",
+  "seed": 1002
+ },
+ {
+  "name": "010-locomotive-steam-platform",
+  "file": "010-locomotive-steam-platform.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a black steam locomotive at a station platform with steam rising",
+  "category": "trains",
+  "seed": 1000
+ },
+ {
+  "name": "012-hot-air-balloon-rooftops",
+  "file": "012-hot-air-balloon-rooftops.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a striped hot-air balloon rising over city rooftops",
+  "category": "balloons",
+  "seed": 1002
+ },
+ {
+  "name": "014-black-cat-red-cushion",
+  "file": "014-black-cat-red-cushion.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a black cat sitting on a red cushion",
+  "category": "animals",
+  "seed": 1000
+ },
+ {
+  "name": "015-irises-vase",
+  "file": "015-irises-vase.png",
+  "width": 120,
+  "height": 120,
+  "caption": "purple irises in a tall vase",
+  "category": "flowers",
+  "seed": 1001
+ },
+ {
+  "name": "017-skier-alpine-slope",
+  "file": "017-skier-alpine-slope.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a skier in a wool sweater speeding down an alpine slope",
+  "category": "winter",
+  "seed": 1002
+ },
+ {
+  "name": "020-lavender-fields-provence",
+  "file": "020-lavender-fields-provence.png",
+  "width": 120,
+  "height": 120,
+  "caption": "rolling fields of lavender under a hot blue sky",
+  "category": "landscapes",
+  "seed": 1000
+ },
+ {
+  "name": "024-vineyard-hillside-sunset",
+  "file": "024-vineyard-hillside-sunset.png",
+  "width": 120,
+  "height": 120,
+  "caption": "rows of vines on a hillside at sunset",
+  "category": "wine",
+  "seed": 1001
+ },
+ {
+  "name": "030-balloon-festival-sky",
+  "file": "030-balloon-festival-sky.png",
+  "width": 120,
+  "height": 120,
+  "caption": "many colorful hot-air balloons filling the sky over a meadow",
+  "category": "balloons",
+  "seed": 1001
+ },
+ {
+  "name": "032-peacock-garden",
+  "file": "032-peacock-garden.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a peacock with its tail spread in a garden",
+  "category": "animals",
+  "seed": 1000
+ },
+ {
+  "name": "033-poppies-field-red",
+  "file": "033-poppies-field-red.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a field of red poppies under a blue sky",
+  "category": "flowers",
+  "seed": 1002
+ },
+ {
+  "name": "036-fish-market-quay",
+  "file": "036-fish-market-quay.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a fish market on a quay with baskets of fish and oysters",
+  "category": "markets",
+  "seed": 1000
+ },
+ {
+  "name": "037-woman-large-hat-portrait",
+  "file": "037-woman-large-hat-portrait.png",
+  "width": 120,
+  "height": 120,
+  "caption": "portrait of a woman in an enormous feathered hat, looking over her shoulder",
+  "category": "people",
+  "seed": 1000
+ },
+ {
+  "name": "039-laundry-courtyard",
+  "file": "039-laundry-courtyard.png",
+  "width": 120,
+  "height": 120,
+  "caption": "women hanging white laundry in a sunny courtyard",
+  "category": "everyday",
+  "seed": 1000
+ },
+ {
+  "name": "040-montmartre-windmill",
+  "file": "040-montmartre-windmill.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a windmill on a hill in Montmartre with steps leading up",
+  "category": "travel",
+  "seed": 1000
+ },
+ {
+  "name": "044-lighthouse-red-white-stripes",
+  "file": "044-lighthouse-red-white-stripes.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a red and white striped lighthouse on a headland",
+  "category": "lighthouses",
+  "seed": 1000
+ },
+ {
+  "name": "045-yacht-race-regatta",
+  "file": "045-yacht-race-regatta.png",
+  "width": 120,
+  "height": 120,
+  "caption": "yachts racing with white sails leaning in the wind",
+  "category": "sailing",
+  "seed": 1000
+ },
+ {
+  "name": "046-train-viaduct-valley",
+  "file": "046-train-viaduct-valley.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a train crossing a tall stone viaduct over a valley",
+  "category": "trains",
+  "seed": 1000
+ },
+ {
+  "name": "054-fruit-market-apples-pears",
+  "file": "054-fruit-market-apples-pears.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a market stall piled with apples, pears and grapes",
+  "category": "markets",
+  "seed": 1000
+ },
+ {
+  "name": "055-couple-boulevard-evening",
+  "file": "055-couple-boulevard-evening.png",
+  "width": 120,
+  "height": 120,
+  "caption": "an elegant couple strolling arm in arm along a lamplit boulevard at dusk",
+  "category": "people",
+  "seed": 1002
+ },
+ {
+  "name": "061-canoe-mountain-lake",
+  "file": "061-canoe-mountain-lake.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a canoe on a mountain lake",
+  "category": "boats",
+  "seed": 1000
+ },
+ {
+  "name": "065-aeroplane-crowd-airfield",
+  "file": "065-aeroplane-crowd-airfield.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a crowd watching a biplane take off from a grass airfield",
+  "category": "aeroplanes",
+  "seed": 1000
+ },
+ {
+  "name": "079-ferry-crossing-passengers",
+  "file": "079-ferry-crossing-passengers.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a small ferry crossing a river with passengers under parasols",
+  "category": "boats",
+  "seed": 1000
+ },
+ {
+  "name": "081-fishing-smack-brown-sails",
+  "file": "081-fishing-smack-brown-sails.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a fishing boat with brown sails in a choppy sea",
+  "category": "sailing",
+  "seed": 1000
+ },
+ {
+  "name": "085-nightclub-dancing-couples",
+  "file": "085-nightclub-dancing-couples.png",
+  "width": 120,
+  "height": 120,
+  "caption": "couples dancing in a smoky nightclub under colored lights",
+  "category": "cabaret",
+  "seed": 1002
+ },
+ {
+  "name": "088-motor-car-seaside-road",
+  "file": "088-motor-car-seaside-road.png",
+  "width": 120,
+  "height": 120,
+  "caption": "a red motor car on a coastal road above the sea",
+  "category": "motorcars",
+  "seed": 1000
+ }
+]

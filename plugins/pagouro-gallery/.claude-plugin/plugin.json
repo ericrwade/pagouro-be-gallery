@@ -1,0 +1,10 @@
+{
+  "name": "pagouro-gallery",
+  "version": "1.0.0",
+  "description": "A pane of Belle Époque posters drawn by Pagouro BE, the free offline image model. /pagouro to open.",
+  "author": { "name": "Eric Wade", "url": "https://pagouro.com" },
+  "homepage": "https://pagouro.com",
+  "license": "Apache-2.0",
+  "keywords": ["gallery", "slideshow", "art", "belle-epoque", "pagouro"],
+  "types": "./types/index.d.ts"
+}
