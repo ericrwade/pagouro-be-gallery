@@ -5,7 +5,8 @@ import type { Slide } from '../types'
 
 // Pagouro BE Gallery: a pane in Claude Code that shows one Belle Époque poster every few seconds, drawn by Pagouro BE,
 // a free image model that runs offline on a USB stick (https://pagouro.com). Thirty pictures ship inside the plugin
-// as small raw-RGB thumbnails and are drawn as half-block colour cells, so any truecolor terminal shows them.
+// as small RGB thumbnails in base64 text and are drawn as half-block colour cells, so any truecolor terminal shows them.
+// The plugin reads only its own files (or a folder the person names); it makes no network calls.
 //
 //   /pagouro_be                       open the gallery (12 s per picture)
 //   /pagouro_be 20                    every 20 s
@@ -133,8 +134,14 @@ export const register: Register = on => {
     const s = list[i % list.length]
     let picture: any = <Text dimColor>(picture missing: {s.name})</Text>
     try {
-      const { base64 } = await $.fs.read(join(dir, `${s.name}.rgb`), { as: 'bytes' })
-      const rgb = Uint8Array.fromBase64(base64)
+      // bundled pictures are base64 text (<name>.b64); thumbnails made by tools/make_thumbs.py are raw bytes (<name>.rgb)
+      let rgb: Uint8Array
+      try {
+        rgb = Uint8Array.fromBase64((await $.fs.read(join(dir, `${s.name}.b64`))).trim())
+      } catch {
+        const { base64 } = await $.fs.read(join(dir, `${s.name}.rgb`), { as: 'bytes' })
+        rgb = Uint8Array.fromBase64(base64)
+      }
       if (rgb.length >= s.width * s.height * 3) {
         // terminal cells are about twice as tall as wide and hold two pixel rows, so a square picture is
         // twice as many columns as rows

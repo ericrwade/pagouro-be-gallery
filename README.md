@@ -56,7 +56,7 @@ It writes a `thumbs` folder inside that folder. Then in Claude Code:
 ## What is in it
 
 `plugins/pagouro-be-gallery/hooks/register.tsx` is the whole plugin (one file, about 170 lines), with a test beside it.
-`plugins/pagouro-be-gallery/pictures/` holds the thirty thumbnails and `index.json` with each picture's caption, its
+`plugins/pagouro-be-gallery/pictures/` holds the thirty thumbnails (raw RGB, base64 text) and `index.json` with each picture's caption, its
 category and the seed it was drawn with. They were chosen from 180 showcase pictures (the ones a vision judge found free of
 the garbled lettering Pagouro BE sometimes draws); the prompts, seeds and judge notes for all 180 are in
 `showcase/x180/prompts.jsonl` of the Pagouro BE repository.

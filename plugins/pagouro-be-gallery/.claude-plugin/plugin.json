@@ -1,9 +1,11 @@
 {
   "name": "pagouro-be-gallery",
-  "version": "1.0.0",
+  "displayName": "Pagouro BE Gallery",
+  "version": "1.1.0",
   "description": "A pane of Belle Époque posters drawn by Pagouro BE, the free offline image model, as a color-cell mosaic (coarse on Windows Terminal). /pagouro_be to open.",
   "author": { "name": "Eric Wade", "url": "https://pagouro.com" },
   "homepage": "https://pagouro.com",
+  "repository": "https://github.com/ericrwade/pagouro-be-gallery",
   "license": "Apache-2.0",
   "keywords": ["gallery", "slideshow", "art", "belle-epoque", "pagouro"],
   "types": "./types/index.d.ts"
