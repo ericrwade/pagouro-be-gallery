@@ -22,19 +22,23 @@ be right.
 
 ## What the hooks do
 
-The plugin is one readable TypeScript file, `hooks/register.tsx`, a Claude Code mod with three hooks:
+The plugin is one readable TypeScript file, `hooks/register.tsx`, a Claude Code mod with four hooks:
 
-- **When a session starts**, it registers the `/pagouro_be` command, then lets the session start as usual.
-- **When you run `/pagouro_be`**, it opens, steps, pauses or closes the gallery pane, shows a one-line confirmation as a
-  toast, and then passes the command on to Claude Code unchanged.
-- **When Claude Code draws the gallery pane**, it reads the current picture from the plugin's `pictures` folder and draws
-  it as colored character cells, with its caption and the credit line underneath.
+- **`session.start`**: lets the session start as usual, then registers the `/pagouro_be` slash command.
+- **`command.run` for `/pagouro_be` only**: opens, steps, pauses, resumes or closes the gallery pane and answers with a
+  one-line confirmation. It answers no other command.
+- **`ui.render` for its own pane only**: reads the current picture from the plugin's `pictures` folder and draws it as
+  colored character cells, with its caption and the credit line underneath. Every other part of Claude Code's interface
+  is passed on unchanged.
+- **`ui.close`**: when you close the gallery pane, it notes that the pane is closed and stops its timer; every close is
+  passed on unchanged.
 
-A timer moves to the next picture every few seconds while the pane is open, and `/pagouro_be stop` cancels it. The
-plugin keeps five small values for the session: the folder, the pace, the current picture, the picture list and whether
-it is paused.
+While the pane is open, a timer moves to the next picture every few seconds and asks Claude Code to redraw the pane. The
+plugin's only memory is a few values in the module itself (the folder, the pace, the current picture, the picture list,
+whether it is paused), kept for the session and never written to disk.
 
 ## What it runs, reads and sends
+
 It reads only its own `pictures` folder, or a folder you name with `/pagouro_be folder`. It makes no network calls, sends
 nothing anywhere, starts no processes, and changes no settings. The credit line under each picture names pagouro.com as
 text; nothing is fetched from it.

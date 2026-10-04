@@ -10,9 +10,8 @@ test('a 2x2 picture becomes one cell column per pixel, top pixel in front, botto
   expect(Array.from(words)).toEqual([0x2580, 0xff0000, 0x0000ff, 0x2580, 0x00ff00, 0xffffff])
 })
 
-test('pause, play and next run without pictures loaded and pass the command on', async ($, on) => {
-  on('command.run', async () => ({ text: 'engine' }))
-  expect((await $.command.run({ command: 'pagouro_be', args: 'pause' })).text).toBe('engine')
-  expect((await $.command.run({ command: 'pagouro_be', args: 'play' })).text).toBe('engine')
-  expect((await $.command.run({ command: 'pagouro_be', args: 'next' })).text).toBe('engine')
+test('pause, play and next answer the command themselves', async $ => {
+  expect((await $.command.run({ command: 'pagouro_be', args: 'pause' })).text).toBe('Gallery paused.')
+  expect((await $.command.run({ command: 'pagouro_be', args: 'play' })).text).toBe('Gallery playing.')
+  expect((await $.command.run({ command: 'pagouro_be', args: 'next' })).text).toBe('Next picture.')
 })
