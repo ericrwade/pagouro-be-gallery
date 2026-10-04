@@ -20,9 +20,21 @@ mosaic rather than a sharp image. On Windows Terminal and the Windows desktop ap
 coarse; make the pane bigger and the font smaller for a finer picture. Any terminal needs 24-bit color for the colors to
 be right.
 
-## What it runs, reads and sends
+## What the hooks do
 
-The plugin is one readable TypeScript file, `hooks/register.tsx`. It registers the `/pagouro_be` command and draws one pane.
+The plugin is one readable TypeScript file, `hooks/register.tsx`, a Claude Code mod with three hooks:
+
+- **When a session starts**, it registers the `/pagouro_be` command, then lets the session start as usual.
+- **When you run `/pagouro_be`**, it opens, steps, pauses or closes the gallery pane, shows a one-line confirmation as a
+  toast, and then passes the command on to Claude Code unchanged.
+- **When Claude Code draws the gallery pane**, it reads the current picture from the plugin's `pictures` folder and draws
+  it as colored character cells, with its caption and the credit line underneath.
+
+A timer moves to the next picture every few seconds while the pane is open, and `/pagouro_be stop` cancels it. The
+plugin keeps five small values for the session: the folder, the pace, the current picture, the picture list and whether
+it is paused.
+
+## What it runs, reads and sends
 It reads only its own `pictures` folder, or a folder you name with `/pagouro_be folder`. It makes no network calls, sends
 nothing anywhere, starts no processes, and changes no settings. The credit line under each picture names pagouro.com as
 text; nothing is fetched from it.
