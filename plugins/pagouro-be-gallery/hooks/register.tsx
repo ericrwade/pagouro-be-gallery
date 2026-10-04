@@ -104,12 +104,12 @@ async function runCommand($: any, argText: string): Promise<string> {
 }
 
 // Each cell is an upper half block: its foreground is one pixel and its background the pixel below it.
-export function rasterCells(rgb: Uint8Array, w: number, h: number, columns: number, rows: number): string {
+export function rasterCells(rgb: Uint8Array, width: number, height: number, columns: number, rows: number): string {
   const words = new Uint32Array(columns * rows * 3)
   const px = (x: number, y: number) => {
-    const sx = Math.min(w - 1, Math.floor((x * w) / columns))
-    const sy = Math.min(h - 1, Math.floor((y * h) / (rows * 2)))
-    const o = (sy * w + sx) * 3
+    const sx = Math.min(width - 1, Math.floor((x * width) / columns))
+    const sy = Math.min(height - 1, Math.floor((y * height) / (rows * 2)))
+    const o = (sy * width + sx) * 3
     return (rgb[o] << 16) | (rgb[o + 1] << 8) | rgb[o + 2]
   }
   let k = 0
